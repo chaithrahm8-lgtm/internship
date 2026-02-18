@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="kitchen.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+</head>
+<body>
+<header>
+<nav class="navbar">
+    <div class="logo">
+        <img src="./k-logo.jpeg" alt="Logo">
+        <h2 class="icon"><span class="K-letter">K</span>-Kitchen</h2>
+    </div>
+
+    <div class="menu">
+        <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="#menu">🍴Menu</a>
+        <a href="#special">🌟Today's Special</a>
+        <a href="#reserve"><i class="fa-solid fa-martini-glass-citrus"></i>Reservation</a>
+    </div>
+    <div class="Nav-right">
+        <input type="text" placeholder="What are you craving">
+        <button>Search</button>
+    </div>
+</nav>
+</header>
+<section id="home">
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>Delicious Food <br> Delivered To You</h1>
+        <p>Fresh | Tasty | Hygienic</p>
+        <button class="order-btn">Buy Now</button>
+    </div>
+    <div class="hero-msg">Try the authentic taste of Korea! 🍲</div>
+</div>
+</section>
+<section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <table class="menu-table">
+        <tr>
+            <th>Dish</th>
+            <th>Category</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Bibimbap</td>
+            <td>Main Course</td>
+            <td>₹299</td>
+        </tr>
+        <tr>
+            <td>Kimchi Fried Rice</td>
+            <td>Main Course</td>
+            <td>₹249</td>
+        </tr>
+        <tr>
+            <td>Tteokbokki</td>
+            <td>Street Food</td>
+            <td>₹180</td>
+        </tr>
+        <tr>
+            <td>Korean Fried Chicken</td>
+            <td>Special</td>
+             <td>₹349</td>
+        </tr>
+        <tr>
+            <td>Ramyeon</td>
+            <td>Noodles</td>
+            <td>₹179</td>
+        </tr>
+        <tr>
+            <td>pizza</td>
+            <td>Special</td>
+            <td>₹199</td>
+        </tr>
+    </table>
+</section>
+<section id="special" class="special-section">
+    <h2> Today's<span class="s"> Special</span></h2>
+
+     <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+         <div class="special-card">
+    <img src="k-bibm.jpeg" alt="bibmbap">
+    <h3>Bibimbap</h3>
+    <p>Rice bowl with veggies & spicy gochujang sauce.</p>
+    <span>₹299</span>
+    </div>
+      </div>
+      <div class="swiper-slide">
+       <div class="special-card">
+        <img src="k-kimchi.jpeg" alt="kimchi">
+        <h3>Kimchi Fried Rice</h3>
+        <p>Spicy fried rice with authentic kimchi.</p>
+        <span>₹249</span>
+    </div> 
+      </div>
+      <div class="swiper-slide">
+        <div class="special-card">
+        <img src="k-kimchi.jpeg" alt="kimchi">
+        <h3>Kimchi Fried Rice</h3>
+        <p>Spicy fried rice with authentic kimchi.</p>
+        <span>₹249</span>
+    </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="special-card">
+        <img src="k-ramyon.jpeg" alt="Noodles">
+        <h3>Ramyeon</h3>
+        <p>Hot noodle soup packed with bold flavors.</p>
+        <span>₹179</span>
+    </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="special-card">
+        <img src="k-chicken.jpeg" alt="chicken">
+        <h3>Korean Fried Chicken</h3>
+        <p>Crunchy chicken glazed with sweet chili sauce.</p>
+        <span>₹349</span>
+    </div>
+      </div>
+     
+    </div>
+    <div class="swiper-pagination"></div>
+  </div> 
+
+</section>
+<section id="reserve" class="booking-section">
+    <div class="booking-container"> 
+        <h2>Book your Table</h2>
+    <div class="booking-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Enter a valid email" required>
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+        <input type="tel" placeholder="Mobile Number" maxlength="10" pattern="[0-9]{10}" required>
+        <textarea placeholder="Message"></textarea>        <button>Book Now</button>
+    </div>
+</div>
+<div class="booking-map">
+<iframe
+  src="https://maps.google.com/maps?q=13.0149162,77.6466021&z=15&output=embed"
+  width="100%"
+  height="400"
+  style="border:0"
+  allowfullscreen=""
+  loading="lazy">
+</iframe>
+</div>
+</section>
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-box">
+      <h2><span class="K-letter">K</span>-Kitchen</h2>
+      <p>Basaveshwara Nagar, Bangalore</p>
+      <p><a href="mailto:kkitchen@gmail.com">kkitchen@gmail.com</a></p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reserve">Booking</a></li>
+        <li><a href="#special">Today’s Special</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 K-Kitchen
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 3,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</body>
+</html>
