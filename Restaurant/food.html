@@ -126,6 +126,8 @@
       </div>
      
     </div>
+     <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
   </div> 
 
@@ -197,6 +199,7 @@
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: 3,
+      loop: true,
       coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -206,6 +209,10 @@
       },
       pagination: {
         el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
     });
   </script>

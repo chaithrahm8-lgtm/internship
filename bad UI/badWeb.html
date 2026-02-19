@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bad Name Selector</title>
+
+    <style>
+        body{
+            background:#06b32b;
+            font-family:Arial, sans-serif;
+            margin:0;
+            text-align:center;
+        }
+        .top-bar{
+           width:100%;
+           text-align:center;
+           margin-top:40px;
+        }
+
+        .submit-btn{
+            width:30%;
+            background:#04eb04;
+            color:white;
+            padding:15px;
+            border:none;
+            font-size:18px;
+            font-family: cursive;
+        }
+
+        .card{
+            background:rgb(241, 9, 9);
+            width:350px;
+            margin:50px auto;
+            padding:40px 20px;
+            border-radius:200px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        h2{
+            margin-bottom:30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+
+        .letter{
+            font-size:70px;
+            margin:30px 0;
+        }
+
+        .buttons button{
+            padding:12px 25px;
+            font-size:18px;
+            margin:5px;
+            background:black;
+            color:white;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            font-family: fantasy;
+        }
+
+        .buttons button:hover{
+            opacity:0.8;
+        }
+
+        #result{
+            margin-top:20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <button class="submit-btn" onclick="submitName()">Submit</button>
+    </div>
+
+    <div class="card">
+        <h2>Please write your name... (good luck)</h2>
+
+        <div class="letter" id="letter">a</div>
+
+        <div class="buttons">
+            <button onclick="prevLetter()"><</button>
+            <button onclick="addLetter()">OK</button>
+            <button onclick="nextLetter()">></button>
+        </div>
+
+        <p id="result"></p>
+    </div>
+
+
+<script>
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
+let index = 0;
+let name = "";
+
+function updateLetter(){
+    document.getElementById("letter").innerText = alphabet[index];
+}
+
+function nextLetter(){
+    index++;
+    if(index >= alphabet.length){
+        index = 0;
+    }
+    updateLetter();
+}
+
+function prevLetter(){
+    index--;
+    if(index < 0){
+        index = alphabet.length - 1;
+    }
+    updateLetter();
+}
+
+function addLetter(){
+    name += alphabet[index];
+}
+
+function submitName(){
+    document.getElementById("result").innerText =
+        "Your name is: " + name + " (That took long huh?) 😈";
+}
+</script>
+
+</body>
+</html>
