@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        #typo1{
+            border-radius: 5%;
+            resize: none;
+            border-color: black;
+            background-color: bisque;
+            width: 300px;
+            height: 100px;
+        }
+        #typo2{
+            border-radius: 5%;
+            background-color: rgb(227, 237, 234);
+            padding: 10px;
+            min-height: 50px;
+            width: 300px;
+            resize: none;
+            border: 1px solid #ccc;
+        }
+        button{
+            margin: 5px;
+            padding: 8px 12px;
+        }
+        button:hover{
+            color: rgb(105, 143, 165);
+            background-color: rgb(120, 79, 112);
+        }
+        .col{
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: aqua;
+            width: 350px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="col">
+        <textarea id="typo1" placeholder="Type here"></textarea>
+        <br> <br>
+
+        <button id="btn" onclick="copyText()">Copy</button>
+        <button onclick="pasteText()">Paste</button>
+        <button onclick="clearText()">Clear</button>
+
+
+        <textarea id="typo2" placeholder="Paste here"></textarea>
+
+    </div>
+
+    <script>
+function copyText() {
+    const text = document.getElementById("typo1").value;
+    navigator.clipboard.writeText(text).then(() => {
+        console.log("Copied!");
+        document.getElementById("btn").textContent = "Copied";
+    });
+}
+
+function pasteText() {
+    navigator.clipboard.readText().then((text) => {
+        const textarea = document.getElementById("typo2");
+        textarea.value += text + "\n";
+    });
+}
+function clearText() {
+    document.getElementById("typo1").value = "";
+    document.getElementById("typo2").value = "";
+}
+
+
+
+</script>
+
+</body>
+</html>
