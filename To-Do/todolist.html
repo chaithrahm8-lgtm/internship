@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Georgia;
+      text-align: center;
+      background-color: #b2a5c0;
+      margin-top: 40px;
+    }
+
+    .todo {
+      background: #ffffff;
+      width: 450px;
+      margin: auto;
+      padding: 15px;
+      color: rgb(0, 0, 0);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    textarea {
+      width: 250px;
+      height: 60px;
+      resize: none;
+      border: 2px solid #880d1e;
+      background: #cbeef3;
+    }
+
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: lightskyblue;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      background: #cbeef3;
+      margin: 10px auto;
+      padding: 8px;
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: black;
+      border: 2px solid #880d1e;
+    }
+
+    .btn-group button {
+      margin-left: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="todo">
+  <h2>To-Do List</h2>
+
+  <textarea id="taskInput" placeholder="Enter task..."></textarea><br>
+
+  <button id="addBtn">Add Task</button>
+  <button id="clearBtn">Clear All</button>
+
+  <ul id="taskList"></ul>
+</div>
+
+<script>
+
+window.onload = function () {
+    loadTasks();
+
+    window.document.getElementById("addBtn")
+        .addEventListener("click", addTask);
+
+    window.document.getElementById("clearBtn")
+        .addEventListener("click", clearAll);
+};
+
+function addTask() {
+    const input = window.document.getElementById("taskInput");
+    const taskText = input.value.trim();
+
+    if (taskText === "") {
+        window.alert("Enter something!");
+        return;
+    }
+
+    createTask(taskText);
+    saveTasks();
+    input.value = "";
+}
+
+function createTask(text) {
+
+    const li = window.document.createElement("li");
+
+    const span = window.document.createElement("span");
+    span.textContent = text;
+
+    const btnGroup = window.document.createElement("div");
+    btnGroup.className = "btn-group";
+
+    const editBtn = window.document.createElement("button");
+    editBtn.textContent = "Edit";
+
+    const saveBtn = window.document.createElement("button");
+    saveBtn.textContent = "Save";
+    saveBtn.style.display = "none";
+
+    const deleteBtn = window.document.createElement("button");
+    deleteBtn.textContent = "Delete";
+
+    btnGroup.appendChild(editBtn);
+    btnGroup.appendChild(saveBtn);
+    btnGroup.appendChild(deleteBtn);
+
+    li.appendChild(span);
+    li.appendChild(btnGroup);
+
+    window.document.getElementById("taskList").appendChild(li);
+
+    // DELETE
+    deleteBtn.onclick = function () {
+        li.remove();
+        saveTasks();
+    };
+
+    // EDIT
+    editBtn.onclick = function () {
+        const inputEdit = window.document.createElement("input");
+        inputEdit.type = "text";
+        inputEdit.value = span.textContent;
+
+        li.insertBefore(inputEdit, span);
+        li.removeChild(span);
+
+        editBtn.style.display = "none";
+        saveBtn.style.display = "inline";
+    };
+
+    // SAVE
+    saveBtn.onclick = function () {
+        const inputEdit = li.querySelector("input");
+        const newText = inputEdit.value.trim();
+
+        if (newText === "") {
+            window.alert("Task cannot be empty");
+            return;
+        }
+
+        span.textContent = newText;
+
+        li.insertBefore(span, inputEdit);
+        li.removeChild(inputEdit);
+
+        saveBtn.style.display = "none";
+        editBtn.style.display = "inline";
+
+        saveTasks();
+    };
+}
+
+function clearAll() {
+    window.document.getElementById("taskList").innerHTML = "";
+    window.localStorage.removeItem("tasks");
+}
+
+function saveTasks() {
+    window.localStorage.setItem(
+        "tasks",
+        window.document.getElementById("taskList").innerHTML
+    );
+}
+
+function loadTasks() {
+    const saved = window.localStorage.getItem("tasks");
+    if (saved) {
+        window.document.getElementById("taskList").innerHTML = saved;
+        reattachEvents();
+    }
+}
+
+
+function reattachEvents() {
+    const listItems = window.document.querySelectorAll("#taskList li");
+
+    listItems.forEach(function(li) {
+        const deleteBtn = li.querySelector("button:nth-child(3)");
+        const editBtn = li.querySelector("button:nth-child(1)");
+        const saveBtn = li.querySelector("button:nth-child(2)");
+
+        deleteBtn.onclick = function () {
+            li.remove();
+            saveTasks();
+        };
+
+        editBtn.onclick = function () {
+            const span = li.querySelector("span");
+            const inputEdit = window.document.createElement("input");
+            inputEdit.type = "text";
+            inputEdit.value = span.textContent;
+
+            li.insertBefore(inputEdit, span);
+            li.removeChild(span);
+
+            editBtn.style.display = "none";
+            saveBtn.style.display = "inline";
+        };
+
+        saveBtn.onclick = function () {
+            const inputEdit = li.querySelector("input");
+            const newText = inputEdit.value.trim();
+
+            if (newText === "") {
+                window.alert("Task cannot be empty");
+                return;
+            }
+
+            const span = window.document.createElement("span");
+            span.textContent = newText;
+
+            li.insertBefore(span, inputEdit);
+            li.removeChild(inputEdit);
+
+            saveBtn.style.display = "none";
+            editBtn.style.display = "inline";
+
+            saveTasks();
+        };
+    });
+}
+
+</script>
+
+</body>
+</html>

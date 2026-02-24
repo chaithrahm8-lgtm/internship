@@ -51,7 +51,6 @@
 
 
         <textarea id="typo2" placeholder="Paste here"></textarea>
-
     </div>
 
     <script>
@@ -59,7 +58,7 @@ function copyText() {
     const text = document.getElementById("typo1").value;
     navigator.clipboard.writeText(text).then(() => {
         console.log("Copied!");
-        document.getElementById("btn").textContent = "Copied";
+        document.getElementById("btn").textContent = "Copy";
     });
 }
 
