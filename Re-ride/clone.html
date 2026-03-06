@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
     .swiper-pagination-bullet {
@@ -32,10 +33,10 @@
     </div>
 
     <nav class="navbar hidden md:flex gap-7 font-semibold">
-      <a href="#" class="hover:text-blue-700">Buy</a>
-      <a href="#" class="hover:text-blue-700">Sell</a>
-      <a href="#" class="hover:text-blue-700">About Us</a>
-      <a href="#" class="hover:text-blue-700">Contact</a>
+      <a href="#" class="no-underline hover:text-blue-700">Buy</a>
+      <a href="#" class="no-underline hover:text-blue-700">Sell</a>
+      <a href="#" class="no-underline hover:text-blue-700">About Us</a>
+      <a href="#" class="no-underline hover:text-blue-700">Contact</a>
     </nav>
 
     <div class="flex items-center gap-4">
@@ -48,16 +49,13 @@
       </button>
     </div>
   </header>
-  <!--hero section-->
+
   <section class="bg-[#f5efec] py-16">
     <div class="max-w-7xl mx-auto px-8 flex items-center justify-between">
-
       <div class="w-1/2">
-
         <p class="inline-block bg-white text-sm px-4 py-1 rounded-full shadow mb-6">
           ✅ Verified listings in Bengaluru
         </p>
-
         <h1 class="text-5xl font-semibold text-blue-900 leading-tight mb-6">
           Re-Ride where every <br>
           bike gets second <br>
@@ -65,81 +63,52 @@
         </h1>
 
         <div class="grid grid-cols-2 gap-8">
-
-          <!-- 1 -->
           <div class="flex items-start gap-3">
-            <div class="bg-blue-100 p-2 rounded-lg">
-              <i class="fa-solid fa-wrench text-blue-600"></i>
-            </div>
+            <div class="bg-blue-100 p-2 rounded-lg"><i class="fa-solid fa-wrench text-blue-600"></i></div>
             <div>
               <h4 class="font-semibold text-blue-900">100% Refurbished</h4>
-              <p class="text-sm text-gray-500">
-                ReRide Certified and restored to like-new condition.
-              </p>
+              <p class="text-sm text-gray-500">ReRide Certified and restored to like-new condition.</p>
             </div>
           </div>
-          <!-- 2 -->
           <div class="flex items-start gap-3">
-            <div class="bg-green-100 p-2 rounded-lg">
-              <i class="fa-solid fa-certificate text-green-600"></i>
-            </div>
+            <div class="bg-green-100 p-2 rounded-lg"><i class="fa-solid fa-certificate text-green-600"></i></div>
             <div>
               <h4 class="font-semibold text-blue-900">Warranty & Service</h4>
-              <p class="text-sm text-gray-500">
-                Up to 1-year warranty and free services included.
-              </p>
+              <p class="text-sm text-gray-500">Up to 1-year warranty and free services included.</p>
             </div>
           </div>
-
-          <!-- 3 -->
           <div class="flex items-start gap-3">
-            <div class="bg-purple-100 p-2 rounded-lg">
-              <i class="fa-solid fa-credit-card text-purple-600"></i>
-            </div>
+            <div class="bg-purple-100 p-2 rounded-lg"><i class="fa-solid fa-credit-card text-purple-600"></i></div>
             <div>
               <h4 class="font-semibold text-blue-900">Easy Financing</h4>
-              <p class="text-sm text-gray-500">
-                Finance up to 85% of the cost with instant approval.
-              </p>
+              <p class="text-sm text-gray-500">Finance up to 85% of the cost with instant approval.</p>
             </div>
           </div>
-
-          <!-- 4 -->
           <div class="flex items-start gap-3">
-            <div class="bg-orange-100 p-2 rounded-lg">
-              <i class="fa-solid fa-right-left text-orange-600"></i>
-            </div>
+            <div class="bg-orange-100 p-2 rounded-lg"><i class="fa-solid fa-right-left text-orange-600"></i></div>
             <div>
               <h4 class="font-semibold text-blue-900">Easy Exchange</h4>
-              <p class="text-sm text-gray-500">
-                Sell or exchange your two-wheeler stress-free.
-              </p>
+              <p class="text-sm text-gray-500">Sell or exchange your two-wheeler stress-free.</p>
             </div>
           </div>
-
         </div>
 
-        <!-- Buttons -->
         <div class="flex gap-4 mt-10">
           <button class="bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 shadow-md">
-            <i class="fa-solid fa-magnifying-glass mr-2"></i>
-            Buy Used Bikes
+            <i class="fa-solid fa-magnifying-glass mr-2"></i>Buy Used Bikes
           </button>
-
-          <button
-            class="border border-gray-300 px-6 py-3 rounded-lg font-semibold bg-white hover:bg-gray-100 shadow-md">
-            <i class="fa-solid fa-camera mr-2"></i>
-            Sell Your Bike
+          <button class="border border-gray-300 px-6 py-3 rounded-lg font-semibold bg-white hover:bg-gray-100 shadow-md">
+            <i class="fa-solid fa-camera mr-2"></i>Sell Your Bike
           </button>
         </div>
-
       </div>
 
       <div class="w-1/2 flex justify-end">
         <img src="./bike1.png" alt="Bike" class="w-full max-w-[550px] object-contain">
       </div>
     </div>
-    <div class="text-blue-900 flex items-center gap-7 m-8 ">
+
+    <div class="text-blue-900 flex items-center gap-7 m-8">
       <div>
         <h1 class="text-3xl font-semibold ">5k+</h1>
         <p>Bikes Sold</p>
@@ -154,188 +123,92 @@
       </div>
     </div>
   </section>
-  <!--section 2-->
-  <section>
-    <div class="max-w-7xl mx-auto px-5">
 
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-5">
       <div class="flex items-center justify-between mb-10">
         <div>
           <h2 class="text-3xl font-semibold text-blue-900">Fresh Arrivals</h2>
-          <p class="text-gray-500 mt-2">
-            Handpicked bikes verified for quality and price.
-          </p>
+          <p class="text-gray-500 mt-2">Handpicked bikes verified for quality and price.</p>
         </div>
-        <a href="#" class="text-blue-800 font-medium hover:underline">
+        <a href="#" class="text-blue-800 font-medium no-underline hover:underline">
           View All Inventory →
         </a>
       </div>
 
-      <!-- Swiper -->
       <div class="swiper mySwiper pb-16">
         <div class="swiper-wrapper">
-
-          <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div
-              class="bg-white rounded-xl shadow-sm p-5 mb-7 bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
+            <div class="bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
               <div class="relative">
-                <img src="./honda.jpg" class="rounded-lg ">
-                <span
-                  class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">
-                  ₹2,10,000
-                </span>
+                <img src="./honda.jpg" alt="Honda" class="rounded-lg w-full">
+                <span class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">₹2,10,000</span>
               </div>
-              <h3 class="text-lg font-semibold text-blue-900 mt-3">
-                Honda CB350 H'ness
-              </h3>
-              <p class="text-sm text-gray-500 mt-1">
-                2022 • 5,000 km • HSR Layout
-              </p>
-              <button
-                class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">
-                View Details
-              </button>
+              <h3 class="text-lg font-semibold text-blue-900 mt-3">Honda CB350 H'ness</h3>
+              <p class="text-sm text-gray-500 mt-1">2022 • 5,000 km • HSR Layout</p>
+              <button class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">View Details</button>
             </div>
           </div>
-
-          <!-- Slide 2 -->
           <div class="swiper-slide">
-            <div
-              class="bg-white rounded-xl shadow-sm p-5  bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
+            <div class="bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
               <div class="relative">
-                <img src="./royal.jpg" class="rounded-lg mb-4">
-                <span
-                  class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">
-                  ₹1,85,000
-                </span>
+                <img src="./royal.jpg" alt="Royal Enfield" class="rounded-lg mb-4 w-full">
+                <span class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">₹1,85,000</span>
               </div>
-              <h3 class="text-lg font-semibold text-blue-900">
-                Royal Enfield Himalayan
-              </h3>
-              <p class="text-sm text-gray-500 mt-1">
-                2021 • 12,000 km • Indiranagar
-              </p>
-              <button
-                class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">
-                View Details
-              </button>
+              <h3 class="text-lg font-semibold text-blue-900">Royal Enfield Himalayan</h3>
+              <p class="text-sm text-gray-500 mt-1">2021 • 12,000 km • Indiranagar</p>
+              <button class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">View Details</button>
             </div>
           </div>
-
-          <!-- Slide 3 -->
           <div class="swiper-slide">
-            <div
-              class="bg-white rounded-xl shadow-sm p-5  bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
+            <div class="bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
               <div class="relative">
-                <img src="./ktm.jpg" class="rounded-lg mb-4">
-                <span
-                  class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">
-                  ₹95,000
-                </span>
+                <img src="./ktm.jpg" alt="KTM" class="rounded-lg mb-4 w-full">
+                <span class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">₹95,000</span>
               </div>
-              <h3 class="text-lg font-semibold text-blue-900">
-                KTM Duke 200
-              </h3>
-              <p class="text-sm text-gray-500 mt-1">
-                2019 • 24,500 km • Koramangala
-              </p>
-              <button
-                class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">
-                View Details
-              </button>
+              <h3 class="text-lg font-semibold text-blue-900">KTM Duke 200</h3>
+              <p class="text-sm text-gray-500 mt-1">2019 • 24,500 km • Koramangala</p>
+              <button class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">View Details</button>
             </div>
           </div>
-
-          <!-- Slide 4 (Repeat) -->
-          <div class="swiper-slide">
-            <div
-              class="bg-white rounded-xl shadow-sm p-5  bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
-              <div class="relative">
-                <img src="./honda.jpg" class="rounded-lg mb-4">
-                <span
-                  class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">
-                  ₹2,10,000
-                </span>
-              </div>
-              <h3 class="text-lg font-semibold text-blue-900">
-                Honda CB350 H'ness
-              </h3>
-              <p class="text-sm text-gray-500 mt-1">
-                2022 • 5,000 km • HSR Layout
-              </p>
-              <button
-                class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">
-                View Details
-              </button>
-            </div>
-          </div>
-
-          <!-- Slide 5 (Repeat) -->
-          <div class="swiper-slide">
-            <div
-              class="bg-white rounded-xl shadow-sm p-5  bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
-              <div class="relative">
-                <img src="./royal.jpg" class="rounded-lg mb-4">
-                <span
-                  class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">
-                  ₹1,85,000
-                </span>
-              </div>
-              <h3 class="text-lg font-semibold text-blue-900">
-                Royal Enfield Himalayan
-              </h3>
-              <p class="text-sm text-gray-500 mt-1">
-                2021 • 12,000 km • Indiranagar
-              </p>
-              <button
-                class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">
-                View Details
-              </button>
-            </div>
-          </div>
-
-          <!-- Slide 6 (Repeat) -->
-          <div class="swiper-slide">
-            <div
-              class="bg-white rounded-xl shadow-sm p-5  bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
-              <div class="relative">
-                <img src="./ktm.jpg" class="rounded-lg mb-4">
-                <span
-                  class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">
-                  ₹95,000
-                </span>
-              </div>
-              <h3 class="text-lg font-semibold text-blue-900">
-                KTM Duke 200
-              </h3>
-              <p class="text-sm text-gray-500 mt-1">
-                2019 • 24,500 km • Koramangala
-              </p>
-              <button
-                class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">
-                View Details
-              </button>
-            </div>
-          </div>
-
         </div>
-        <div class="swiper-pagination "></div>
+        <div class="swiper-pagination"></div>
       </div>
+    </div>
+  </section>
 
+  <section class="bg-white py-16 px-6 text-center">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-blue-900 mb-2">Why ReRide?</h2>
+      <p class="text-gray-500 mb-12">We bridge the gap between trust and affordability in the second-hand market.</p>
+      <div class="flex flex-col md:flex-row justify-center gap-10">
+        <div class="max-w-xs">
+          <div class="bg-pink-100 w-12 h-12 rounded-lg mx-auto mb-4 flex items-center justify-center text-xl">👤</div>
+          <h3 class="font-bold mb-2">Verified Sellers Only</h3>
+          <p class="text-gray-500 text-sm">We verify the identity of every seller in Bengaluru to ensure you aren't dealing with bots or fraud.</p>
+        </div>
+        <div class="max-w-xs">
+          <div class="bg-pink-100 w-12 h-12 rounded-lg mx-auto mb-4 flex items-center justify-center text-xl font-bold text-gray-700">₹</div>
+          <h3 class="font-bold mb-2">Fair & Transparent Pricing</h3>
+          <p class="text-gray-500 text-sm">No hidden dealer commissions. Negotiate directly with the owner and get the real market value.</p>
+        </div>
+        <div class="max-w-xs">
+          <div class="bg-pink-100 w-12 h-12 rounded-lg mx-auto mb-4 flex items-center justify-center text-xl">📄</div>
+          <h3 class="font-bold mb-2">Easy Ownership Transfer</h3>
+          <p class="text-gray-500 text-sm">We provide RTO assistance and paperwork guidance to make the ownership transfer seamless.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
+  <script src="script.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
       spaceBetween: 30,
       loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+      pagination: { el: ".swiper-pagination", clickable: true },
       breakpoints: {
         0: { slidesPerView: 1 },
         640: { slidesPerView: 2 },
@@ -343,66 +216,29 @@
       },
     });
   </script>
-  <script src="script.js"></script>
-  <!--section 3-->
-  <section>
-    <div class="bg-white py-16 px-6 text-center">
-      <h2 class="text-3xl font-bold text-blue-900 mb-2">Why ReRide?</h2>
-      <p class="text-gray-500 mb-12">We bridge the gap between trust and affordability in the second-hand market.</p>
 
-      <div class="flex justify-center gap-10">
-        <div class="max-w-xs">
-          <div class="bg-pink-100 w-12 h-12 rounded-lg mx-auto mb-4 flex items-center justify-center text-xl">👤</div>
-          <h3 class="font-bold mb-2">Verified Sellers Only</h3>
-          <p class="text-gray-500 text-sm">We verify the identity of every seller in Bengaluru to ensure you aren't
-            dealing with bots or fraud.</p>
-        </div>
-        <div class="max-w-xs">
-          <div
-            class="bg-pink-100 w-12 h-12 rounded-lg mx-auto mb-4 flex items-center justify-center text-xl font-bold text-gray-700">
-            ₹</div>
-          <h3 class="font-bold mb-2">Fair & Transparent Pricing</h3>
-          <p class="text-gray-500 text-sm">No hidden dealer commissions. Negotiate directly with the owner and get the
-            real market value.</p>
-        </div>
-        <div class="max-w-xs">
-          <div class="bg-pink-100 w-12 h-12 rounded-lg mx-auto mb-4 flex items-center justify-center text-xl">📄</div>
-          <h3 class="font-bold mb-2">Easy Ownership Transfer</h3>
-          <p class="text-gray-500 text-sm">We provide RTO assistance and paperwork guidance to make the ownership
-            transfer seamless.</p>
-        </div>
+  <section class="bg-[#0a1f58] text-white py-20 px-10 flex flex-wrap items-center justify-center gap-16">
+    <div class="max-w-lg">
+      <h2 class="text-4xl font-bold mb-4">Got a bike gathering dust?</h2>
+      <p class="text-gray-300 mb-8">Turn your motorcycle into cash in 3 easy steps. Listing on ReRide is free, fast, and secure.</p>
+
+      <div class="space-y-6">
+        <p><b>1. Snap & Upload</b><br><span class="text-gray-400 text-sm">Take clear photos of your bike and upload details.</span></p>
+        <p><b>2. Get Vehicle Inspected</b><br><span class="text-gray-400 text-sm">Schedule a free inspection at your convenience.</span></p>
+        <p><b>3. Sell</b><br><span class="text-gray-400 text-sm">Connect with verified buyers and close the deal.</span></p>
       </div>
     </div>
 
-    <div class="bg-[#0a1f58] text-white py-20 px-10 flex flex-wrap items-center justify-center gap-16">
-
-      <div class="max-w-lg">
-        <h2 class="text-4xl font-bold mb-4">Got a bike gathering dust?</h2>
-        <p class="text-gray-300 mb-8">Turn your motorcycle into cash in 3 easy steps. Listing on ReRide is free, fast,
-          and secure.</p>
-
-        <div class="space-y-6">
-          <p><b>1. Snap & Upload</b><br><span class="text-gray-400 text-sm">Take clear photos of your bike and upload
-              details.</span></p>
-          <p><b>2. Get Vehicle Inspected</b><br><span class="text-gray-400 text-sm">Schedule a free inspection at your
-              convenience.</span></p>
-          <p><b>3. Sell</b><br><span class="text-gray-400 text-sm">Connect with verified buyers and close the
-              deal.</span></p>
-        </div>
-      </div>
-
-      <div class="bg-white/10 p-10 rounded-2xl border border-white/20 text-center w-80">
-        <h3 class="text-xl font-bold mb-2">Sell your bike today</h3>
-        <p class="text-gray-300 text-sm mb-6">Join 2,000+ sellers in Bengaluru this month.</p>
-        <button class="bg-white text-blue-900 font-bold py-3 px-6 rounded-lg w-full mb-4  hover:bg-pink-300 ">
-          + Post Your Bike for Free
-        </button>
-        <p class="text-xs text-gray-400 italic">No credit card required • Takes only 2 minutes</p>
-      </div>
-
+    <div class="bg-white/10 p-10 rounded-2xl border border-white/20 text-center w-80">
+      <h3 class="text-xl font-bold mb-2">Sell your bike today</h3>
+      <p class="text-gray-300 text-sm mb-6">Join 2,000+ sellers in Bengaluru this month.</p>
+      <button class="bg-white text-blue-900 font-bold py-3 px-6 rounded-lg w-full mb-4 hover:bg-pink-300 ">
+        + Post Your Bike for Free
+      </button>
+      <p class="text-xs text-gray-400 italic">No credit card required • Takes only 2 minutes</p>
     </div>
   </section>
-  <!--section 4-->
+
   <section class="py-16 px-4 bg-[#FFF5F2]">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-3xl font-bold text-center text-[#1D3557] mb-12">How It Works</h2>
@@ -470,16 +306,15 @@
       </div>
     </div>
   </section>
-  <!--section 5-->
+
   <section class="py-16 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-center text-[#1D3557] mb-12">Stories from Bengaluru Riders</h2>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-[#FFF5F2] p-6 rounded-xl">
+        <div class="bg-[#FFF5F2] p-6 rounded-xl border-2 border-orange-100">
           <div class="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</div>
-          <p class="italic text-slate-700 mb-6">"Sold my Apache 200 in just 3 days. The buyer came from HSR Layout,
-            checked the bike... Super smooth process."</p>
+          <p class="italic text-slate-700 mb-6">"Sold my Apache 200 in just 3 days. The buyer came from HSR Layout, checked the bike... Super smooth process."</p>
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 bg-slate-300 rounded-full"></div>
             <div>
@@ -491,8 +326,7 @@
 
         <div class="bg-[#FFF5F2] p-6 rounded-xl border-2 border-orange-100">
           <div class="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</div>
-          <p class="italic text-slate-700 mb-6">"I was worried about buying a used bike, but the Verified badge helped
-            me choose... Highly recommend!"</p>
+          <p class="italic text-slate-700 mb-6">"I was worried about buying a used bike, but the Verified badge helped me choose... Highly recommend!"</p>
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 bg-slate-300 rounded-full"></div>
             <div>
@@ -502,10 +336,9 @@
           </div>
         </div>
 
-        <div class="bg-[#FFF5F2] p-6 rounded-xl">
+        <div class="bg-[#FFF5F2] p-6 rounded-xl border-2 border-orange-100">
           <div class="text-yellow-500 mb-4">⭐⭐⭐⭐⭐</div>
-          <p class="italic text-slate-700 mb-6">"Great platform for budget bikes. Found a decent Honda Activa for my
-            daily commute to college."</p>
+          <p class="italic text-slate-700 mb-6">"Great platform for budget bikes. Found a decent Honda Activa for my daily commute to college."</p>
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 bg-slate-300 rounded-full"></div>
             <div>
@@ -517,36 +350,32 @@
       </div>
     </div>
   </section>
-  <!--section 6-->
+
   <section class="bg-[#FFF5F2] py-14 px-6 text-center">
     <h3 class="text-[#1D3557] font-bold text-lg md:text-xl">
       Born in Bengaluru. Growing for India.
     </h3>
-
     <p class="text-slate-500 text-[11px] md:text-xs mt-2 max-w-2xl mx-auto leading-relaxed">
       Currently serving all major zones in Bengaluru. Coming soon to Mysore, Mangalore, and Hubli.
     </p>
-
-    <div
-      class="flex flex-row justify-center items-center gap-6 md:gap-12 mt-8 text-slate-400 font-semibold text-sm md:text-base">
+    <div class="flex flex-row justify-center items-center gap-6 md:gap-12 mt-8 text-slate-400 font-semibold text-sm md:text-base">
       <span class="cursor-default">SecurePayment</span>
       <span class="cursor-default">RTO-Assist</span>
       <span class="cursor-default">BikeCheck</span>
     </div>
   </section>
-  <!--section 7-->
+
   <section class="bg-[#0A1D56] text-white py-20 px-4 text-center">
     <h2 class="text-4xl font-bold mb-4">Ready to ride?</h2>
     <p class="text-gray-300 mb-10">Whether you are upgrading or selling, we make it simple.</p>
     <div class="flex justify-center gap-4">
-      <button class="bg-white text-[#0A1D56] font-bold py-3 px-10 rounded-lg  hover:bg-pink-200">Buy a Bike</button>
+      <button class="bg-white text-[#0A1D56] font-bold py-3 px-10 rounded-lg hover:bg-pink-200">Buy a Bike</button>
       <button class="border border-white py-3 px-10 rounded-lg hover:bg-pink-200">Sell Your Bike</button>
     </div>
   </section>
-  <!--footer-->
+
   <footer class="bg-[#0A1D56] text-white pt-16 pb-8 px-8 border-t border-white/10">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-
       <div>
         <h3 class="text-2xl font-black italic tracking-tighter mb-4">RE-RIDE</h3>
         <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
@@ -557,9 +386,9 @@
       <div>
         <h4 class="font-bold mb-4 text-sm">Quick Links</h4>
         <ul class="text-gray-400 text-sm space-y-2">
-          <li><a href="#" class="hover:text-white">Buy Used Bikes</a></li>
-          <li><a href="#" class="hover:text-white">Sell Your Bike</a></li>
-          <li><a href="#" class="hover:text-white">About us</a></li>
+          <li><a href="#" class="no-underline hover:text-white">Buy Used Bikes</a></li>
+          <li><a href="#" class="no-underline hover:text-white">Sell Your Bike</a></li>
+          <li><a href="#" class="no-underline hover:text-white">About us</a></li>
         </ul>
       </div>
 
@@ -568,17 +397,16 @@
         <p class="text-gray-400 text-sm mb-2">Jalhalli, Bengaluru, KA 560038</p>
         <p class="text-gray-400 text-sm mb-4">support@reride.com</p>
         <div class="flex gap-4 text-lg">
-          <a href="#" class="hover:text-gray-300">fb</a>
-          <a href="#" class="hover:text-gray-300">ig</a>
-          <a href="#" class="hover:text-gray-300">tw</a>
+          <a href="#" class="no-underline hover:text-gray-300">fb</a>
+          <a href="#" class="no-underline hover:text-gray-300">ig</a>
+          <a href="#" class="no-underline hover:text-gray-300">tw</a>
         </div>
       </div>
-
     </div>
 
     <div class="text-center border-t border-white/5 pt-8">
       <p class="text-[10px] text-gray-500 uppercase tracking-widest">
-        © 2026 ReRide Bikes. design and developed by thincnext
+        © 2026 ReRide Bikes. Design and developed by thincnext
       </p>
     </div>
   </footer>
