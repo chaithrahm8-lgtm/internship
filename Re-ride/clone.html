@@ -11,18 +11,36 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
-    .swiper-pagination-bullet {
-      background: #94a3b8;
-      position: relative;
-      margin-top: 30px;
-      opacity: 1;
-    }
+   <style>
+  /* 1. Add extra space inside the Swiper container for the dots */
+  .mySwiper {
+    padding-bottom: 60px !important; 
+  }
 
-    .swiper-pagination-bullet-active {
-      background: #1e3a8a;
-      width: 20px;
-      border-radius: 10px;
-    }
+  /* 2. Push the cards up, leaving room for dots below */
+  .swiper-wrapper {
+    margin-bottom: 20px; 
+  }
+
+  /* 3. Force the pagination to the very bottom of the padded area */
+  .swiper-pagination {
+    bottom: 0px !important; 
+    position: absolute;
+  }
+
+  /* 4. Your custom bullet styles */
+  .swiper-pagination-bullet {
+    background: #94a3b8;
+    opacity: 1;
+    margin: 0 5px !important; /* Horizontal spacing between dots */
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #1e3a8a;
+    width: 20px;
+    border-radius: 10px;
+  }
+</style>
   </style>
 </head>
 
@@ -33,10 +51,10 @@
     </div>
 
     <nav class="navbar hidden md:flex gap-7 font-semibold">
-      <a href="#" class="no-underline hover:text-blue-700">Buy</a>
-      <a href="#" class="no-underline hover:text-blue-700">Sell</a>
-      <a href="#" class="no-underline hover:text-blue-700">About Us</a>
-      <a href="#" class="no-underline hover:text-blue-700">Contact</a>
+      <a href="#" class="hover:text-blue-700">Buy</a>
+      <a href="#" class="hover:text-blue-700">Sell</a>
+      <a href="#" class="hover:text-blue-700">About Us</a>
+      <a href="#" class="hover:text-blue-700">Contact</a>
     </nav>
 
     <div class="flex items-center gap-4">
@@ -131,7 +149,7 @@
           <h2 class="text-3xl font-semibold text-blue-900">Fresh Arrivals</h2>
           <p class="text-gray-500 mt-2">Handpicked bikes verified for quality and price.</p>
         </div>
-        <a href="#" class="text-blue-800 font-medium no-underline hover:underline">
+        <a href="#" class="text-blue-800 font-medium  hover:underline">
           View All Inventory →
         </a>
       </div>
@@ -171,6 +189,28 @@
               <button class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">View Details</button>
             </div>
           </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
+              <div class="relative">
+                <img src="./ktm.jpg" alt="KTM" class="rounded-lg mb-4 w-full">
+                <span class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">₹95,000</span>
+              </div>
+              <h3 class="text-lg font-semibold text-blue-900">KTM Duke 200</h3>
+              <p class="text-sm text-gray-500 mt-1">2019 • 24,500 km • Koramangala</p>
+              <button class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">View Details</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-xl shadow-sm p-5 transition transform hover:-translate-y-2 hover:shadow-xl duration-300">
+              <div class="relative">
+                <img src="./royal.jpg" alt="Royal Enfield" class="rounded-lg mb-4 w-full">
+                <span class="absolute top-3 left-3 bg-blue-900 text-white text-sm font-semibold px-3 py-1 rounded-lg shadow">₹1,85,000</span>
+              </div>
+              <h3 class="text-lg font-semibold text-blue-900">Royal Enfield Himalayan</h3>
+              <p class="text-sm text-gray-500 mt-1">2021 • 12,000 km • Indiranagar</p>
+              <button class="mt-4 w-full border border-blue-800 text-blue-800 py-2 rounded-lg hover:bg-blue-800 hover:text-white transition">View Details</button>
+            </div>
+          </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -202,20 +242,22 @@
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: true,
-      pagination: { el: ".swiper-pagination", clickable: true },
-      breakpoints: {
-        0: { slidesPerView: 1 },
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      },
-    });
-  </script>
+  
+ <script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1, 
+    spaceBetween: 20,
+    loop: true, 
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script>
 
   <section class="bg-[#0a1f58] text-white py-20 px-10 flex flex-wrap items-center justify-center gap-16">
     <div class="max-w-lg">
@@ -276,7 +318,7 @@
 
         <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
           <div class="flex items-center gap-3 mb-6">
-            <span class="p-2 bg-orange-100 rounded-lg text-orange-600">🏷️</span>
+            <span class="p-2 bg-orange-100 rounded-lg">🏷️</span>
             <h3 class="text-xl font-bold">For Sellers</h3>
           </div>
           <ul class="space-y-6">
@@ -378,7 +420,7 @@
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
       <div>
         <h3 class="text-2xl font-black italic tracking-tighter mb-4">RE-RIDE</h3>
-        <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+        <p class="text-gray-400 text-sm  max-w-xs">
           Trusted by thousands of riders in Bengaluru. The safest way to buy and sell used two-wheelers.
         </p>
       </div>
@@ -386,9 +428,9 @@
       <div>
         <h4 class="font-bold mb-4 text-sm">Quick Links</h4>
         <ul class="text-gray-400 text-sm space-y-2">
-          <li><a href="#" class="no-underline hover:text-white">Buy Used Bikes</a></li>
-          <li><a href="#" class="no-underline hover:text-white">Sell Your Bike</a></li>
-          <li><a href="#" class="no-underline hover:text-white">About us</a></li>
+          <li><a href="#" class="hover:text-white">Buy Used Bikes</a></li>
+          <li><a href="#" class="hover:text-white">Sell Your Bike</a></li>
+          <li><a href="#" class="hover:text-white">About us</a></li>
         </ul>
       </div>
 
@@ -397,9 +439,9 @@
         <p class="text-gray-400 text-sm mb-2">Jalhalli, Bengaluru, KA 560038</p>
         <p class="text-gray-400 text-sm mb-4">support@reride.com</p>
         <div class="flex gap-4 text-lg">
-          <a href="#" class="no-underline hover:text-gray-300">fb</a>
-          <a href="#" class="no-underline hover:text-gray-300">ig</a>
-          <a href="#" class="no-underline hover:text-gray-300">tw</a>
+          <a href="#" class="hover:text-gray-300">fb</a>
+          <a href="#" class="hover:text-gray-300">ig</a>
+          <a href="#" class="hover:text-gray-300">tw</a>
         </div>
       </div>
     </div>
